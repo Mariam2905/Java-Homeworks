@@ -2,7 +2,6 @@ package homeworks.arrays;
 
 import java.util.Arrays;
 
-
 public class Arrays1 {
     /**
      * 1․ Գրել method, որը տպում է int[] n  array-ի դրական տարրերը․
@@ -119,6 +118,20 @@ public class Arrays1 {
      */
     public static void trio() {
         int[] array = {1, 5, 6, 4};
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i; j < array.length; j++) {
+                for (int k = j; k < array.length; k++) {
+                    if (array[i] != array[j] && array[j] != array[k]) {
+                        System.out.println(array[i] + " " + array[j] + " " + array[k]);
+                        System.out.println(array[i] + " " + array[k] + " " + array[j]);
+                        System.out.println(array[j] + " " + array[i] + " " + array[k]);
+                        System.out.println(array[j] + " " + array[k] + " " + array[i]);
+                        System.out.println(array[k] + " " + array[i] + " " + array[j]);
+                        System.out.println(array[k] + " " + array[j] + " " + array[i]);
+                    }
+                }
+            }
+        }
     }
 
     /**
@@ -203,7 +216,14 @@ public class Arrays1 {
      */
     public static void longestIncreasingSubsequence() {
         int[] array = {1, 5, 6, 4, 9, 0, 4, 7, 7, 9, 1};
-
+        for(int k = 0; k< array.length; k++){
+            array[k] = 1;
+            for(int i = 0; i<k; i++){
+                if(array[i]<array[k]){
+                    array[k] = Math.max(array[k], array[i]+1);
+                }
+            }
+        }
     }
 
     /**
@@ -214,7 +234,13 @@ public class Arrays1 {
      */
     public static void withBinaryForm() {
         int[] array = {1, 1, 0, 0, 1, 1};
-
+        int number = 0;
+        int degree = 0;
+        for (int i = array.length-1; i >=0; i--) {
+            number += array[i]*Math.pow(2,degree);
+            degree++;
+        }
+        System.out.println(number);
     }
 
     /**
@@ -288,13 +314,13 @@ public class Arrays1 {
 //        transfer();
 //        sumOfElementsArray();
 //        repeatNumber(3);
-        trio();
+//        trio();
         int[] array = {17, 25, 0, 124, -36, -19, 48};
 //        descendingSequence(array);
 //        oddAtTheEnd(array);
 //        withoutZeros();
         longestIncreasingSubsequence();
-        withBinaryForm();
+//        withBinaryForm();
 //        aboveTheDiagonal();
 //        respectToTheInvertedDiagonal();
 //        sumIsZero();
