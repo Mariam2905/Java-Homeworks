@@ -220,7 +220,7 @@ public class Arrays1 {
         int count = 0;
         int start = 0;
         int counter = 1;
-        for (int i = 0; i < array.length-1; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
             if (array[i] <= array[i + 1]) {
                 count++;
                 if (count > counter) {
@@ -291,7 +291,7 @@ public class Arrays1 {
 
     /**
      * 16․ Տրված բնական թվերի քառակուսային մատրիցի համար արտածել YES,
-     * եթե նրա բոլոր տողերի տարրերի գումարը զրո է։  NO հակառակ դեպքում։
+     * եթե նրա բոլոր տողերի տարրերի գումարը զույգ է։  NO հակառակ դեպքում։
      * Oրինակ՝    a = {1,-1,0,0}
      * {2,-2,1,-1}        // YES
      * {9,7,1,-17}
@@ -301,18 +301,16 @@ public class Arrays1 {
      * {9,7,1,-17}
      */
     public static void sumIsZero() {
-        int[][] array = {{1, -1, 0, 0}, {2, -2, 1, -1}, {9, 7, 1, -17}, {4, 5, 7, -11}};
+        int[][] array = {{1, -1, 0, 0}, {2, -2, 1, -1}, {9, 7, 1, -17}};
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 sum += array[i][j];
             }
         }
-        if (sum == 0) {
-            System.out.println("The sum of all its row elements is: " + sum);
+        if (sum % 2 == 0) {
             System.out.println("Yes");
         } else {
-            System.out.println("The sum of all its row elements is: " + sum);
             System.out.println("No");
         }
     }
@@ -331,10 +329,10 @@ public class Arrays1 {
 //        descendingSequence(array);
 //        oddAtTheEnd(array);
 //        withoutZeros();
-        longestIncreasingSubsequence();
+//        longestIncreasingSubsequence();
 //        withBinaryForm();
 //        aboveTheDiagonal();
 //        respectToTheInvertedDiagonal();
-//        sumIsZero();
+        sumIsZero();
     }
 }
