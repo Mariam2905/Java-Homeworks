@@ -1,5 +1,6 @@
 package homeworks.arrays;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class Arrays1 {
@@ -216,13 +217,24 @@ public class Arrays1 {
      */
     public static void longestIncreasingSubsequence() {
         int[] array = {1, 5, 6, 4, 9, 0, 4, 7, 7, 9, 1};
-        for(int k = 0; k< array.length; k++){
-            array[k] = 1;
-            for(int i = 0; i<k; i++){
-                if(array[i]<array[k]){
-                    array[k] = Math.max(array[k], array[i]+1);
+        int count = 0;
+        int start = 0;
+        int counter = 1;
+        for (int i = 0; i < array.length-1; i++) {
+            if (array[i] <= array[i + 1]) {
+                count++;
+                if (count > counter) {
+                    counter = count + 1;
+                    start = i - count + 1;
                 }
+            } else {
+                count = 0;
             }
+        }
+        int[] subsequence = new int[counter + 1];
+        for (int i = 0; i < counter; i++) {
+            subsequence[i] = array[i + start];
+            System.out.print(subsequence[i] + " ");
         }
     }
 
@@ -236,8 +248,8 @@ public class Arrays1 {
         int[] array = {1, 1, 0, 0, 1, 1};
         int number = 0;
         int degree = 0;
-        for (int i = array.length-1; i >=0; i--) {
-            number += array[i]*Math.pow(2,degree);
+        for (int i = array.length - 1; i >= 0; i--) {
+            number += array[i] * Math.pow(2, degree);
             degree++;
         }
         System.out.println(number);
