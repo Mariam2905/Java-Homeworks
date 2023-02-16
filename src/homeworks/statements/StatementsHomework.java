@@ -1,6 +1,5 @@
 package homeworks.statements;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class StatementsHomework {
@@ -8,9 +7,9 @@ public class StatementsHomework {
     /**
      * 1. Գրել method, որը ստուգում է տրված x ամբողջ թիվը զույգ է թե կենտ
      *
-     * @param number
+     * @param number;
      */
-    public static void pairOrOdd(int number) {
+    void pairOrOdd(int number) {
         if (number % 2 == 0) {
             System.out.println("Տրված թիվը զույգ է");
         } else {
@@ -21,9 +20,9 @@ public class StatementsHomework {
     /**
      * 2. Գրել method, որը ստուգում է տրված  x ամբողջ  թիվը դրական է թե բացասական
      *
-     * @param number
+     * @param number;
      */
-    public static void positiveOrNegative(int number) {
+    void positiveOrNegative(int number) {
         if (number < 0) {
             System.out.println("Տրված թիվը բացասական է");
         } else {
@@ -35,9 +34,9 @@ public class StatementsHomework {
      * 3. Գրել method, որը ստուգում է տրված x ամբողջ  թիվը  ՝ կամ փոքր 8 ից  և մեծ 5 ից
      * Կամ փոքր  20 ից և մեծ 15 ից ․
      *
-     * @param number
+     * @param number;
      */
-    public static void bigOrSmall(int number) {
+    void bigOrSmall(int number) {
         if ((number < 8 && number > 5) || (number < 20 && number > 15)) {
             System.out.println("Տրված թիվը փոքր է 8-ից և մեծ է 5-ից կամ տրված թիվը փոքր է 20-ից և մեծ է 15-ից։");
         } else {
@@ -51,7 +50,7 @@ public class StatementsHomework {
      *
      * @param number;
      */
-    public static void divisionBy5To7(int number) {
+    void divisionBy5To7(int number) {
         if (number % 5 == 0 && number % 7 == 0) {
             System.out.println(number + " թիվը բաժանվում է 5-ի և 7-ի վրա առանց մնացորդի");
         } else {
@@ -65,7 +64,7 @@ public class StatementsHomework {
      *
      * @param threeDigitNumber;
      */
-    public static void threeDigitNumber(int threeDigitNumber) {
+    void threeDigitNumber(int threeDigitNumber) {
         int n1 = threeDigitNumber / 10;
         int n2 = n1 % 10;
         if (n2 == 7) {
@@ -81,7 +80,7 @@ public class StatementsHomework {
      * @param a;
      * @param b;
      */
-    public static void inInside(int a, int b) {
+    void inInside(int a, int b) {
         int x = 0;
         int y = 5;
         int r = (int) Math.sqrt(Math.pow(x, 2) + (int) Math.pow(y, 2));
@@ -97,7 +96,7 @@ public class StatementsHomework {
      * @param number2;
      * @param number3;
      */
-    public static int maxElement(int number1, int number2, int number3) {
+    int maxElement(int number1, int number2, int number3) {
         int array[] = {number1, number2, number3};
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
@@ -120,7 +119,7 @@ public class StatementsHomework {
      *
      * @param date;
      */
-    public static void leapYear(int date) {
+    void leapYear(int date) {
         if (date % 4 == 0 & date % 100 != 0) {
             System.out.println(date + " year is leap.");
         } else if (date % 100 == 0 & date % 400 == 0) {
@@ -138,7 +137,7 @@ public class StatementsHomework {
      System.out.println(x);
 
      */
-    public static void printNumber() {
+    void printNumber() {
         int x = 0;
         while (x++ < 10) {
             if (x == 8) {
@@ -154,9 +153,8 @@ public class StatementsHomework {
           y++;
           }
  */
-    public static void theTrue() {
+    void theTrue() {
         int x = 2;
-        int y = 5;
         while (x < 10) {
             x++;
             System.out.println(x);
@@ -170,7 +168,7 @@ public class StatementsHomework {
             }
             System.out.println(x)
 */
-    public static void theTrue2() {
+    void theTrue2() {
         int x = 15;
         while (x > 10) {
             x--;
@@ -180,10 +178,8 @@ public class StatementsHomework {
 
     /**
      * 11.Գրել method, որը console -ում  տպում է  1 ից  200 թվերը․
-     *
-     * @param
      */
-    public static void theNumbers() {
+    void theNumbers() {
         for (int i = 1; i <= 200; i++) {
             System.out.print(i + " ");
         }
@@ -194,7 +190,7 @@ public class StatementsHomework {
      *
      * @param number;
      */
-    public static void theFirstDigit(int number) {
+    void theFirstDigit(int number) {
         for (int i = number; i > 0; i = i / 10) {
             if (i <= 9) {
                 System.out.println(i);
@@ -205,7 +201,7 @@ public class StatementsHomework {
     /**
      * 13. Տրված են int x = 1, int y = 0.  Քանի դեռ x < 5 ից  և  y < 10  տպել  x+y արտահայտությունը․
      */
-    public static int sum() {
+    int sum() {
         int x = 1;
         int y = 0;
         int sum = 0;
@@ -223,7 +219,7 @@ public class StatementsHomework {
      *
      * @param side;
      */
-    public static void squareWithSymbol(char side) {
+    void squareWithSymbol(char side) {
         for (int i = 0; i < 30; i++) {
             System.out.print('*');
             System.out.println();
@@ -238,7 +234,7 @@ public class StatementsHomework {
      *
      * @param number;
      */
-    public static void sumOfTheNumbersDivisibleBy5(int number) {
+    void sumOfTheNumbersDivisibleBy5(int number) {
         int sum = 0;
         for (int i = 1; i < number; i++) {
             if (i % 5 == 0) {
@@ -253,7 +249,7 @@ public class StatementsHomework {
      *
      * @param number;
      */
-    public static long multiplicationForPairNumbers(int number) {
+    long multiplicationForPairNumbers(int number) {
         long multiple = 1;
         for (int i = 1; i <= number; i++) {
             if (i >= 10 & i <= 99) {
@@ -268,21 +264,18 @@ public class StatementsHomework {
      * 9․ Գրել method, որը [1-N] հաջորդական  թվերի մեջ գտնում է
      * մեծագույն և փոքրագույն տարրերը և հաշվում նրանց թվաբանական միջինը։
      *
-     * @param;
+     * @param number;
      */
-    public static int theArithmeticMainOftheMaxAndMinValues(int number) {
-        int number1 = 1;
+    int theArithmeticMainOftheMaxAndMinValues(int number) {
         int ArithmeticMain = (1 + number) / 2;
         System.out.println(ArithmeticMain);
         return ArithmeticMain;
     }
 
     /**
-     * 10․ Գրել method, որը ստանում է 5 - անիշ ամբողջ թիվ և հաշվում  այդ թվի թվանշանների գումարը։
-     *
-     * @param ;
+     * 10․ Գրել method, որը ստանում է 5 - անիշ ամբողջ թիվ և հաշվում  այդ թվի թվանշանների գումարը:
      */
-    public static int sumOfTheDigits() {
+    int sumOfTheDigits() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a five-digit number to calculate the sum of the digits ");
         int number = input.nextInt();
@@ -298,24 +291,25 @@ public class StatementsHomework {
     }
 
     public static void main(String[] args) {
-//        pairOrOdd(-8);
-//        positiveOrNegative(17);
-//        bigOrSmall(20);
-//        divisionBy5To7(40);
-//        threeDigitNumber(846);
-//        inInside(5, 7);
-//        maxElement(-54, 223, 7);
-//        leapYear(2013);
-//        printNumber();
-//        theTrue();
-//        theTrue2();
-//        theNumbers();
-//        theFirstDigit(7498);
-//        sum();
-//        squareWithSymbol('*');
-//        numberDivisibleBy5(23);
-//        multiplicationForPairNumbers(14);
-//        theArithmeticMainOftheMaxAndMinValues(5);
-        sumOfTheDigits();
+        StatementsHomework myStatementsHomwork = new StatementsHomework();
+//        myStatementsHomwork.pairOrOdd(-8);
+//        myStatementsHomwork.positiveOrNegative(17);
+//        myStatementsHomwork.bigOrSmall(20);
+//        myStatementsHomwork.divisionBy5To7(40);
+//        myStatementsHomwork.threeDigitNumber(846);
+//        myStatementsHomwork.inInside(5, 7);
+//        myStatementsHomwork.maxElement(-54, 223, 7);
+//        myStatementsHomwork.leapYear(2013);
+//        myStatementsHomwork.printNumber();
+//        myStatementsHomwork.theTrue();
+//        myStatementsHomwork.theTrue2();
+//        myStatementsHomwork.theNumbers();
+//        myStatementsHomwork.theFirstDigit(7498);
+//        myStatementsHomwork.sum();
+//        myStatementsHomwork.squareWithSymbol('*');
+//        myStatementsHomwork.sumOfTheNumbersDivisibleBy5(23);
+//        myStatementsHomwork.multiplicationForPairNumbers(14);
+//        myStatementsHomwork.theArithmeticMainOftheMaxAndMinValues(5);
+        myStatementsHomwork.sumOfTheDigits();
     }
 }

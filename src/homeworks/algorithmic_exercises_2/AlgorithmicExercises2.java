@@ -2,20 +2,17 @@ package homeworks.algorithmic_exercises_2;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.math.BigInteger;
 
 public class AlgorithmicExercises2 {
 
     /**
-     * Write a program that prompts the user to input a positive integer.
+     * 1. Write a program that prompts the user to input a positive integer.
      * It should then print the multiplication table of that number.
-     *
-     * @param ;
      */
-    public static void multiplication() {
+    void multiplication() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write a positive integer: ");
-        int number = sc.nextInt();
+        long number = sc.nextInt();
         int count = 1;
         while (count <= 10) {
             long result = number * count;
@@ -25,13 +22,11 @@ public class AlgorithmicExercises2 {
     }
 
     /**
-     * Two numbers are entered through the keyboard.
+     * 2. Two numbers are entered through the keyboard.
      * Write a program to find the value of one number raised to the power of another.
      * (Do not use Java built-in method)
-     *
-     * @param
      */
-    public static void raisedToThePower() {
+    long raisedToThePower() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write first number: ");
         int number1 = sc.nextInt();
@@ -42,14 +37,15 @@ public class AlgorithmicExercises2 {
             result = number1 * result;
         }
         System.out.println("The value of" + number1 + " raised to the power of " + number2 + " is " + result);
+        return result;
     }
 
     /**
-     * Write a program that prompts the user to input an integer and
+     * 3. Write a program that prompts the user to input an integer and
      * then outputs the number with the digits reversed.
      * For example, if the input is 12345, the output should be 54321.
      */
-    public static void digitsReversed() {
+    int digitsReversed() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write your number: ");
         int number = sc.nextInt();
@@ -60,15 +56,14 @@ public class AlgorithmicExercises2 {
             number /= 10;
         }
         System.out.println("The reversed number is " + reverse);
+        return reverse;
     }
 
     /**
-     * Write a program that prompts the user to input a positive integer.
+     * 4. Write a program that prompts the user to input a positive integer.
      * It should then output a message indicating whether the number is a prime number.
-     *
-     * @param
      */
-    public static void primeNumber() {
+    void primeNumber() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write your number: ");
         int number = sc.nextInt();
@@ -87,14 +82,12 @@ public class AlgorithmicExercises2 {
     }
 
     /**
-     * Write a do-while loop that asks the user to enter two numbers.
+     * 5. Write a do-while loop that asks the user to enter two numbers.
      * The numbers should be added and the sum displayed.
      * The loop should ask the user whether he or she wishes to perform the operation again.
      * If so, the loop should repeat; otherwise it should terminate.
-     *
-     * @param
      */
-    public static void repeat() {
+    int repeat() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please write first number: ");
         int number1 = sc.nextInt();
@@ -113,15 +106,14 @@ public class AlgorithmicExercises2 {
         }
         while (number3 == 0);
         System.out.println(sum);
+        return sum;
     }
 
     /**
-     * Write a program to enter the numbers till the user wants
+     * 6. Write a program to enter the numbers till the user wants
      * and at the end it should display the count of positive, negative and zeros entered.
-     *
-     * @param;
      */
-    public static void positiveNegativeAndZero() {
+    void positiveNegativeAndZero() {
         Scanner sc = new Scanner(System.in);
         int number;
         int countPositive = 0;
@@ -147,12 +139,10 @@ public class AlgorithmicExercises2 {
     }
 
     /**
-     * Write a program to enter the numbers till the user wants
+     * 7. Write a program to enter the numbers till the user wants
      * and at the end the program should display the largest and smallest numbers entered.
-     *
-     * @param
      */
-    public static void largestAndSmallest() {
+    void largestAndSmallest() {
         Scanner sc = new Scanner(System.in);
         int number;
         int largestNumber = Integer.MIN_VALUE;
@@ -176,13 +166,11 @@ public class AlgorithmicExercises2 {
 
 
     /**
-     * Write a program to print out all Armstrong numbers between 1 and 500.
+     * 8. Write a program to print out all Armstrong numbers between 1 and 500.
      * If sum of cubes of each digit of the number is equal to the number itself, then the number is called an Armstrong number.
      * For example, 153 = ( 1 * 1 * 1 ) + ( 5 * 5 * 5 ) + ( 3 * 3 * 3 )
-     *
-     * @param ;
      */
-    public static void armstrongNumbers() {
+    void armstrongNumbers() {
         System.out.println("Armstrong numbers between 1 and 500 are: ");
         int number, digit;
         int sum = 0;
@@ -201,12 +189,12 @@ public class AlgorithmicExercises2 {
     }
 
     /**
-     * Write a program to calculate the sum of following series where n is input by user.
+     * 9. Write a program to calculate the sum of following series where n is input by user.
      * 1/1 + 1/2 + 1/3 + 1/4 + 1/5 +…………1/n
      *
      * @param number;
      */
-    public static double sum(int number) {
+    double sum(int number) {
         double result = 0.0;
         for (int i = 1; i <= number; i++) {
             result = result + 1.0 / i;
@@ -216,13 +204,13 @@ public class AlgorithmicExercises2 {
     }
 
     /**
-     * Compute the natural logarithm of 2, by adding up to n terms in the series
+     * 10. Compute the natural logarithm of 2, by adding up to n terms in the series
      * 1 - 1/2 + 1/3 - 1/4 + 1/5 -... 1/n
      * where n is a positive integer and input by user.
      *
-     * @param number
+     * @param number;
      */
-    public static double log(int number) {
+    double log(int number) {
 //        double result = Math.log(2);
         double result = 0.0;
         for (int i = 1; i <= number; i++) {
@@ -238,15 +226,13 @@ public class AlgorithmicExercises2 {
 
 
     /**
-     * Write a program that generates a random number and asks the user to guess what the number is.
+     * 11. Write a program that generates a random number and asks the user to guess what the number is.
      * If the user's guess is higher than the random number, the program should display
      * "Too high, try again." If the user's guess is lower than the random number,
      * the program should display "Too low, try again."
      * The program should use a loop that repeats until the user correctly guesses the random number.
-     *
-     * @param;
      */
-    public static void highOrLowRandom() {
+    void highOrLowRandom() {
         int answer;
         int experience;
         final int max = 100;
@@ -271,7 +257,7 @@ public class AlgorithmicExercises2 {
     /*
      * 12. Write a program to print following :
      */
-    public static void rectangle() {
+    void rectangle() {
         for (int i = 1; i <= 4; i++) {
             System.out.print('*');
             for (int j = 1; j <= 10; j++) {
@@ -281,7 +267,7 @@ public class AlgorithmicExercises2 {
         }
     }
 
-    public static void fromLeftToRight() {
+    void fromLeftToRight() {
         for (int i = 1; i <= 5; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print('*');
@@ -290,7 +276,7 @@ public class AlgorithmicExercises2 {
         }
     }
 
-    public static void fromRightToLeft() {
+    void fromRightToLeft() {
         for (int i = 1; i <= 5; i++) {
             for (int j = (5 - i); j >= 1; j--) {
                 System.out.print(" ");
@@ -302,7 +288,7 @@ public class AlgorithmicExercises2 {
         }
     }
 
-    public static void triangle() {
+    void triangle() {
         for (int i = 1; i <= 5; i++) {
             for (int j = 5 - i; j >= 1; j--) {
                 System.out.print(" ");
@@ -314,7 +300,7 @@ public class AlgorithmicExercises2 {
         }
     }
 
-    public static void pyramide() {
+    void pyramide() {
         for (int i = 1; i <= 5; i++) {
             for (int j = 5 - i; j >= 1; j--) {
                 System.out.print(" ");
@@ -326,7 +312,7 @@ public class AlgorithmicExercises2 {
         }
     }
 
-    public static void pyramide2() {
+    void pyramide2() {
         int rows = 5;
         for (int i = 1; i <= rows; i++) {
             for (int j = rows - i; j >= 1; j--) {
@@ -343,15 +329,13 @@ public class AlgorithmicExercises2 {
     }
 
     /**
-     * Write a program to compute sinx for given x.
+     * 13. Write a program to compute sinx for given x.
      * The user should supply x and a positive integer n.
      * We compute the sine of x using the series and the computation should use all terms in the series
      * up through the term involving xn
      * sin x = x - x3/3! + x5/5! - x7/7! + x9/9! .......
-     *
-     * @param;
      */
-    public static void sinx() {
+    double sinx() {
 //        System.out.println(Math.sin(7));
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the degree: ");
@@ -360,7 +344,7 @@ public class AlgorithmicExercises2 {
         int n = sc.nextInt();
         double radians = Math.toRadians(x);
         double sin = 0.0;
-        double sum = 0.0;
+        double sum;
         int pow = 1;
         for (int j = 1; j <= n; j++) {
             if (j % 2 == 0) {
@@ -372,9 +356,10 @@ public class AlgorithmicExercises2 {
             pow += 2;
         }
         System.out.println(sin);
+        return sin;
     }
 
-    public static long factorial(int n) {
+    long factorial(int n) {
         long factorial = 1L;
         for (int i = 1; i <= n; i++) {
             factorial *= i;
@@ -383,14 +368,12 @@ public class AlgorithmicExercises2 {
     }
 
     /**
-     * Write a program to compute the cosine of x. The user should supply x and a positive integer n.
+     * 14. Write a program to compute the cosine of x. The user should supply x and a positive integer n.
      * We compute the cosine of x using the series and the computation should use all terms in the series
      * up through the term involving xn
      * cos x = 1 - x2/2! + x4/4! - x6/6! .....
-     *
-     * @param
      */
-    public static void cosx() {
+    double cosx() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the degree: ");
         int x = sc.nextInt();
@@ -398,7 +381,7 @@ public class AlgorithmicExercises2 {
         int n = sc.nextInt();
         double radians = Math.toRadians(x);
         double cos = 0.0;
-        double sum = 0.0;
+        double sum;
         int pow = 0;
         for (int i = 1; i <= n; i++) {
             if (i % 2 == 0) {
@@ -410,27 +393,29 @@ public class AlgorithmicExercises2 {
             pow += 2;
         }
         System.out.println(cos);
+        return cos;
     }
 
     public static void main(String[] args) {
-//        multiplication();
-//        raisedToThePower();
-//        digitsReversed();
-//        primeNumber();
-//        repeat();
-//        positiveNegativeAndZero();
-//        largestAndSmallest();
-//        armstrongNumbers();
-//        sum(5);
-//        log(5);
-//        highOrLowRandom();
-//        rectangle();
-//        fromLeftToRight();
-//        fromRightToLeft();
-//        triangle();
-//        pyramide();
-        pyramide2();
-//        sinx();
-//        cosx();
+        AlgorithmicExercises2 myAlgorithmicExercises2 = new AlgorithmicExercises2();
+//        myAlgorithmicExercises2.multiplication();
+//        myAlgorithmicExercises2.raisedToThePower();
+//        myAlgorithmicExercises2.digitsReversed();
+//        myAlgorithmicExercises2.primeNumber();
+//        myAlgorithmicExercises2.repeat();
+//        myAlgorithmicExercises2.positiveNegativeAndZero();
+//        myAlgorithmicExercises2.largestAndSmallest();
+        myAlgorithmicExercises2.armstrongNumbers();
+//        myAlgorithmicExercises2.sum(5);
+//        myAlgorithmicExercises2.log(5);
+//        myAlgorithmicExercises2.highOrLowRandom();
+//        myAlgorithmicExercises2.rectangle();
+//        myAlgorithmicExercises2.fromLeftToRight();
+//        myAlgorithmicExercises2.fromRightToLeft();
+//        myAlgorithmicExercises2.triangle();
+//        myAlgorithmicExercises2.pyramide();
+//        myAlgorithmicExercises2.pyramide2();
+//        myAlgorithmicExercises2.sinx();
+//        myAlgorithmicExercises2.cosx();
     }
 }

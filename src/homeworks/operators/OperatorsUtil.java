@@ -1,13 +1,11 @@
 package homeworks.operators;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 public class OperatorsUtil {
 
     //  1․  Ստեղծել 2 փոփոխական(int a = 8, int b = 6), տպել console -ում
-    public static void arithmeticOperators1() {
+    void arithmeticOperators1() {
         int a = 8;
         int b = 6;
         System.out.println(a + b);
@@ -18,7 +16,7 @@ public class OperatorsUtil {
     }
 
     //  2․  Ստեղծել 2 փոփոխական(double c = 6.4, double d = 0.03), տպել  console -ում
-    public static void arithmeticOperators2() {
+    void arithmeticOperators2() {
         double c = 6.4;
         double d = 0.03;
         System.out.println(c + d);
@@ -29,7 +27,7 @@ public class OperatorsUtil {
     }
 
     //  3․  Տպել  console -ում
-    public static void result() {
+    void result() {
         int x = 2 * ((5 + 3) * 4 - 8);
         int y = 2 * 5 + 3 * 4 - 8;
         System.out.println(x);
@@ -37,7 +35,7 @@ public class OperatorsUtil {
     }
 
     //  4․  Ստեղծել 2 փոփոխական(int e = 10,  int f = -88, boolean n1 = true), տպել console -ում
-    public static void experience() {
+    void experience() {
         int e = 10;
         int f = -88;
         boolean n1 = true;
@@ -55,7 +53,7 @@ public class OperatorsUtil {
         System.out.println("y is " + y);
     }
 
-    public static void answers() {
+    void answers() {
         int x = (int) 1.0;
         System.out.println(x);
         short y = (short) 1921222;
@@ -69,7 +67,7 @@ public class OperatorsUtil {
         System.out.println(s);
     }
 
-    public static void relantionalOperators() {
+    void relantionalOperators() {
         int aa = 10;
         int bb = 20;
         System.out.println(aa < bb);
@@ -78,7 +76,7 @@ public class OperatorsUtil {
         System.out.println(aa > bb);
     }
 
-    public static void theFalse() {
+    void theFalse() {
         float y1 = 2.1f;
         System.out.println(y1);
         byte x1 = 5;
@@ -96,7 +94,7 @@ public class OperatorsUtil {
     }
 
     //    Հայտարարել երկու int տիպի փոփոխականներ, վերագրել 10 և 5 այնուհետև փոփոխականի արժեքները տեղերով փոխել։
-    public static void swapped1() {
+    void swapped1() {
         int v = 10;
         int r = 5;
         int v1 = r;
@@ -105,7 +103,7 @@ public class OperatorsUtil {
         System.out.println("Now r is " + r);
     }
 
-    public static void swapped2() {
+    void swapped2() {
         int v = 7;
         int r = 3;
         System.out.println("Original values of v is " + v);
@@ -119,7 +117,7 @@ public class OperatorsUtil {
     }
 
     //    Գրել ծրագիր, որը հաշվում է 1-100 թվերի գումարը։ (ցիկլ չoգտագործել)
-    public static int sum(int number) {
+    int sum(int number) {
 //        ընդհանուր դեպքի համար
         int result = 0;
         int n1 = number;
@@ -140,7 +138,7 @@ public class OperatorsUtil {
     }
 
 
-    public static void betwiseAndLogicalOperators() {
+    void betwiseAndLogicalOperators() {
         int a3 = 8;
         int b3 = 3;
         System.out.println(a3 & b3);
@@ -153,14 +151,14 @@ public class OperatorsUtil {
         System.out.println(b3 ^ b3);
     }
 
-    public static void shiftOperator() {
+    void shiftOperator() {
         System.out.println(10 << 2);
         System.out.println(-10 << 3);
         System.out.println(20 >> 2);
         System.out.println(15 >> 3);
     }
 
-    public static void shiftOperator2() {
+    void shiftOperator2() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your number ");
         int number = sc.nextInt();
@@ -169,18 +167,19 @@ public class OperatorsUtil {
     }
 
     public static void main(String[] args) {
-//        arithmeticOperators1();
-//        arithmeticOperators2();
-//        result();
-//        experience();
-//        answers();
-//        relantionalOperators();
-//        theFalse();
-//        swapped1();
-//        swapped2();
-//        sum();
-//        betwiseAndLogicalOperators();
-//        shiftOperator();
-        shiftOperator2();
+        OperatorsUtil myOperatorsUtilHomework = new OperatorsUtil();
+//        myOperatorsUtilHomework.arithmeticOperators1();
+//        myOperatorsUtilHomework.arithmeticOperators2();
+//        myOperatorsUtilHomework.result();
+//        myOperatorsUtilHomework.experience();
+//        myOperatorsUtilHomework.answers();
+//        myOperatorsUtilHomework.relantionalOperators();
+//        myOperatorsUtilHomework.theFalse();
+//        myOperatorsUtilHomework.swapped1();
+//        myOperatorsUtilHomework.swapped2();
+//        myOperatorsUtilHomework.sum(200);
+//        myOperatorsUtilHomework.betwiseAndLogicalOperators();
+//        myOperatorsUtilHomework.shiftOperator();
+        myOperatorsUtilHomework.shiftOperator2();
     }
 }
