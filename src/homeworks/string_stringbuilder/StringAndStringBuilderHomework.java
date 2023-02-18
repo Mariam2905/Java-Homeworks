@@ -157,6 +157,7 @@ public class StringAndStringBuilderHomework {
         System.out.println(newLine);
     }
 
+
     void textWithoutCharA1() {
         StringBuilder str = new StringBuilder("We are living in an yellow submarine. We don't have anything");
         StringBuilder newStr = new StringBuilder();
@@ -268,7 +269,7 @@ public class StringAndStringBuilderHomework {
 
     public static void main(String[] args) {
         StringAndStringBuilderHomework myStr = new StringAndStringBuilderHomework();
-//        myStr.concatenation();
+        myStr.concatenation();
 //        myStr.methodconcatenationWithStringBuilder();
 //        myStr.splitText("We are living in");
 //        myStr.reverseWord("sample");
@@ -284,6 +285,6 @@ public class StringAndStringBuilderHomework {
 //        myStr.printSubLine("We are living in an yellow submarine. We don't have anything", 15);
 //        myStr.printSubLine1("We are living in an yellow submarine. We don't have anything", 25);
 //        myStr.ifIsEmpty("");
-        myStr.maxWord("We, are, living, in an, yellow, submarine, We don't, have anything");
+//        myStr.maxWord("We, are, living, in an, yellow, submarine, We don't, have anything");
     }
 }
