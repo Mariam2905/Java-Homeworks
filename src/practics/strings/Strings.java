@@ -80,13 +80,49 @@ public class Strings {
     /**
      * Given a string, write a method that returns new string with reverted words order.
      * Pay attention to the punctuation at the end of the sentence (period).
+     *
      * @param line
      */
-    void revertedWOrds(String line){
+    void revertedWOrds(String line) {
         String[] str = line.split(" ");
-        boolean digit = true;
-        for (int i = 0; i < str.length; i++) {
+        String result = "";
+        if (!line.endsWith(".")) {
+            for (int i = str.length - 1; i >= 0; i--) {
+                result += str[i];
+            }
+        } else {
 
+            // լրացնել
+
+        }
+        System.out.println(result);
+    }
+
+    /**
+     * Given a string and substring, write a method that returns number of occurrences
+     * of substring in the string. Assume that both are case-sensitive.
+     * You may need to use library function here.
+     *
+     * @param str, sub;
+     *             return count;
+     */
+    int numberOfOccurrences(String str, String sub) {
+        int count = str.split(sub).length - 1;
+        System.out.println(count);
+        return count;
+    }
+
+    /**
+     * Given a string, write a method that returns array of chars
+     * (ASCII characters) sorted in descending order.
+     *
+     * @param text
+     */
+    void sortCharacters(String text) {
+        char[] arr = text.toCharArray();
+        Arrays.sort(arr);
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i]);
         }
     }
 
@@ -97,6 +133,9 @@ public class Strings {
 //        str.wordWithUppercase("Aliquam dolor nisl?");
 //        str.twoStringsInOne("good one", "111");
 //        str.numberOfWords("This is sample sentence");
-        str.revertedWOrds("John Doe.");
+//        str.revertedWOrds("John Doe .");
+//        str.revertedWOrds("A, B. C");
+//        str.numberOfOccurrences("do it now", "do");
+        str.sortCharacters("fohjwf42os");
     }
 }
