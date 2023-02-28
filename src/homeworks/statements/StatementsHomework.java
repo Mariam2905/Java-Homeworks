@@ -95,6 +95,7 @@ public class StatementsHomework {
      * @param number1;
      * @param number2;
      * @param number3;
+     * @return max;
      */
     int maxElement(int number1, int number2, int number3) {
         int array[] = {number1, number2, number3};
@@ -200,6 +201,7 @@ public class StatementsHomework {
 
     /**
      * 13. Տրված են int x = 1, int y = 0.  Քանի դեռ x < 5 ից  և  y < 10  տպել  x+y արտահայտությունը․
+     * @return sum;
      */
     int sum() {
         int x = 1;
@@ -248,6 +250,7 @@ public class StatementsHomework {
      * 8. Գրել method, որը հաշվում է [1-N]  բոլոր  երկնիշ զույգ թվերի արտադրյալը։
      *
      * @param number;
+     * @return multiple;
      */
     long multiplicationForPairNumbers(int number) {
         long multiple = 1;
@@ -265,6 +268,7 @@ public class StatementsHomework {
      * մեծագույն և փոքրագույն տարրերը և հաշվում նրանց թվաբանական միջինը։
      *
      * @param number;
+     * @return ArithmeticMain;
      */
     int theArithmeticMainOftheMaxAndMinValues(int number) {
         int ArithmeticMain = (1 + number) / 2;
@@ -274,6 +278,7 @@ public class StatementsHomework {
 
     /**
      * 10․ Գրել method, որը ստանում է 5 - անիշ ամբողջ թիվ և հաշվում  այդ թվի թվանշանների գումարը:
+     * @return sum;
      */
     int sumOfTheDigits() {
         Scanner input = new Scanner(System.in);

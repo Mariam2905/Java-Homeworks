@@ -10,6 +10,7 @@ public class Strings {
     /**
      * Given a string, write a method which returns sum of all digits in that string.
      * Assume that string contains only single digits.
+     * @return sum
      */
     int sumOfAllDigitsString() {
         int sum = 0;
@@ -32,6 +33,7 @@ public class Strings {
      *
      * @param line
      */
+
     void wordWithUppercase(String line) {
         String[] chars = line.split("");
         String str1 = "";

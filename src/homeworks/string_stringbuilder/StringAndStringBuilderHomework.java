@@ -175,6 +175,7 @@ public class StringAndStringBuilderHomework {
      * result:  “We *re living in *n yellow subm*rine. We don't  h*ve *nything”
      *
      * @param text
+     * @return newText;
      */
     String replaceChar(String text) {
         String newText = text.replace('a', '*');

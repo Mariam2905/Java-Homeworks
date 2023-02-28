@@ -37,6 +37,7 @@ public class Arrays1 {
 
     /**
      * 3. Գրել method, որը գտնում և  տպում է  long[] l array-ի ամենամեծ տարրը․
+     * @return maxElement;
      */
     long maxElement() {
         long[] array = {4, 7, 1, 5, 2};
@@ -52,6 +53,7 @@ public class Arrays1 {
 
     /**
      * 4. Գրել method, որը գտնում և տպում է  float[] f  array-ի ամենափոքր տարրը․
+     *      @return minElement;
      */
     float minElement() {
         float[] array = {4.2f, -127.3f, 0.0f, 4.3f};
@@ -98,6 +100,8 @@ public class Arrays1 {
      * 7. Գրել method, որը հաշվում է թե քանի անգամ է k թիվը հանդիպել array-ի Էլեմենտների մեջ։
      * Oրինակ՝  array = {1,5,6,4,5}
      * k = 5; // 2
+     * @param repeatNumber;
+     * @return repeatNumber;
      */
     int repeatNumber(int repeatNumber) {
         int[] array = {3, 5, 6, 4, 5, 5};
@@ -243,6 +247,7 @@ public class Arrays1 {
      * և արտածել n  թվի 10-ական ներկայացումը:
      * Oրինակ՝    array = {1,1,0,0,1,1}
      * // 51
+     * @return number;
      */
     int withBinaryForm() {
         int[] array = {1, 1, 0, 0, 1, 1};

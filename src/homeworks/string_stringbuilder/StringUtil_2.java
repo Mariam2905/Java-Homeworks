@@ -111,7 +111,7 @@ public class StringUtil_2 {
 //        }
 //    }
     void commaSeparatedString(String str) {
-    String subStr = Arrays.toString(str.split(","));
+        String subStr = Arrays.toString(str.split(","));
         for (int i = 0; i < str.length(); i++) {
 
             //լրացնել
@@ -126,24 +126,23 @@ public class StringUtil_2 {
      * Например, для поворота на 5 буква «с» будет заменена на «h».
      * В случае «z» алфавит вращается, и он превращается в «d».
      * Реализуйте декодер для шифра Цезаря, где N = 5.
+     * @param text, number
+     * @return newText;
      */
     String chipherCaesar(String text, int number) {
         String newText = "";
         char flag = text.charAt(0);
         for (int i = 0; i < text.length(); i++) {
-            if (text.charAt(i) >= 65 && text.charAt(i) <= 90 - number) {
+            if (text.charAt(i) >= 65 && text.charAt(i) <= 90 - number || text.charAt(i) >= 97 && text.charAt(i) <= 122 - number) {
                 flag = (char) (text.charAt(i) + number);
-            } else if (text.charAt(i) > 90 - number && text.charAt(i) <= 90) {
-                flag = (char) (text.charAt(i) + number - 26);
-            } else if (text.charAt(i) >= 97 && text.charAt(i) <= 122 - number) {
-                flag = (char) (text.charAt(i) + number);
-            } else if (text.charAt(i) > 122 - number && text.charAt(i) <= 122) {
+            } else if (text.charAt(i) > 90 - number && text.charAt(i) <= 90 || text.charAt(i) > 122 - number && text.charAt(i) <= 122) {
                 flag = (char) (text.charAt(i) + number - 26);
             }
             newText += flag;
         }
         return newText;
     }
+//ամենաէֆեկտիվ տարբերակը (str-65+5)%26+65
 
     /**
      * 7. A palindrome is a word which reads the same backward or forward. 'abcba' is a palindrome.
@@ -178,6 +177,8 @@ public class StringUtil_2 {
 
     /**
      * 8.	Given two strings, write a method that finds the longest common sub-sequence.
+     * @param str1, str2,
+     * @return result;
      */
     String longestCommonSubSequence(String str1, String str2) {
         String result = "";
@@ -248,6 +249,7 @@ public class StringUtil_2 {
      * Because "foo(bar(baz))blim" becomes "foo(barzab)blim" and then "foobazrabblim".
      *
      * @param str;
+     * @return str;
      */
     String reverserCharacters(String str) {
         int index1 = -1;
@@ -278,8 +280,8 @@ public class StringUtil_2 {
 //        System.out.println(myHomework.isPalindrome("abcba"));
 //        myHomework.listOfStrings();
 //        myHomework.commaSeparatedString(3.44f);
-        myHomework.commaSeparatedString("3.44");
-//        System.out.println(myHomework.chipherCaesar("Java", 5));
+//        myHomework.commaSeparatedString("3.44");
+        System.out.println(myHomework.chipherCaesar("Java", 5));
 //        System.out.println(myHomework.theLongestPalindrome("nowabbas"));
 //        System.out.println(myHomework.longestCommonSubSequence("JDK Java", "JVM Java"));
 //        myHomework.commonCharacters("JAVA", "JVM");

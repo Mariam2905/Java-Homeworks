@@ -86,6 +86,7 @@ public class AlgorithmicExercises2 {
      * The numbers should be added and the sum displayed.
      * The loop should ask the user whether he or she wishes to perform the operation again.
      * If so, the loop should repeat; otherwise it should terminate.
+     * @return sum;
      */
     int repeat() {
         Scanner sc = new Scanner(System.in);
@@ -193,6 +194,7 @@ public class AlgorithmicExercises2 {
      * 1/1 + 1/2 + 1/3 + 1/4 + 1/5 +…………1/n
      *
      * @param number;
+     * @return result;
      */
     double sum(int number) {
         double result = 0.0;
@@ -209,6 +211,7 @@ public class AlgorithmicExercises2 {
      * where n is a positive integer and input by user.
      *
      * @param number;
+     * @return result;
      */
     double log(int number) {
 //        double result = Math.log(2);
@@ -334,6 +337,7 @@ public class AlgorithmicExercises2 {
      * We compute the sine of x using the series and the computation should use all terms in the series
      * up through the term involving xn
      * sin x = x - x3/3! + x5/5! - x7/7! + x9/9! .......
+     * @return sin;
      */
     double sinx() {
 //        System.out.println(Math.sin(7));
@@ -372,6 +376,7 @@ public class AlgorithmicExercises2 {
      * We compute the cosine of x using the series and the computation should use all terms in the series
      * up through the term involving xn
      * cos x = 1 - x2/2! + x4/4! - x6/6! .....
+     * @return cos,
      */
     double cosx() {
         Scanner sc = new Scanner(System.in);

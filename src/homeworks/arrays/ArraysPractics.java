@@ -24,6 +24,7 @@ public class ArraysPractics {
      * 2. Write a program that creates an array of 10 elements size.
      * Your program should prompt the user to input numbers in array and
      * then display the sum of all array elements.
+     * @return sum;
      */
     int sumOfElements() {
         int[] array = new int[10];
