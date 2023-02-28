@@ -1,4 +1,4 @@
-package practics.oop.problem4;
+package homeworks.inheritance.problem_4;
 
 public class Car {
     private int passengerCount;
