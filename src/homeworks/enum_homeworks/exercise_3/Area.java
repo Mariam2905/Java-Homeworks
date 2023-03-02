@@ -2,6 +2,9 @@ package homeworks.enum_homeworks.exercise_3;
 
 import java.util.Scanner;
 
+/**
+ * This method calculate the areas of shapes.
+ */
 public class Area {
     Shapes area;
     //հարց խի եմ ընկնում անընդհատ ֆունկցիայի մեջ՞՞՞
