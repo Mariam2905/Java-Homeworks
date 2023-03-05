@@ -1,6 +1,4 @@
-package homeworks.enum_homeworks.exercise_2;
-
-import homeworks.enum_homeworks.exercise_1.Planets;
+package homeworks.enum_homeworks.enum1.exercise_2;
 
 public class Main {
     public static void main(String args[]) {

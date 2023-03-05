@@ -1,6 +1,4 @@
-package homeworks.enum_homeworks.exercise_3;
-
-import java.util.Scanner;
+package homeworks.enum_homeworks.enum1.exercise_3;
 
 /**
  * This method calculate the areas of shapes.

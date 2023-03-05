@@ -25,7 +25,7 @@ public class Test {
         students.add(student3);
         List<Course> courses = new ArrayList<>();
         Professor teacher1 = new Professor("John", "Doe", LocalDate.of(1961, 10, 4), 250000, DegreeTeacher.LECTURER);
-        Professor teacher2 = new Professor("Sae", "Daw", LocalDate.of(1956, 10, 4), 270000, DegreeTeacher.VISITING);
+        Professor teacher2 = new Professor("Sae", "Daw", LocalDate.of(1956, 12, 25), 270000, DegreeTeacher.VISITING);
         Course course1 = new Course("Mathematics", teacher1, students);
         Course course2 = new Course("Phisics", teacher2, students);
         courses.add(course1);

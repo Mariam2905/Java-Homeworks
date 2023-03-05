@@ -1,4 +1,4 @@
-package homeworks.enum_homeworks.exercise_4;
+package homeworks.enum_homeworks.enum1.exercise_4;
 
 /**
  * This program shows how many distance have each planet from the sun.

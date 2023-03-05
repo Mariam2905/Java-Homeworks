@@ -1,4 +1,4 @@
-package homeworks.enum_homeworks.exercise_1;
+package homeworks.enum_homeworks.enum1.exercise_1;
 
 public class Main {
     public static void main(String[] args) {

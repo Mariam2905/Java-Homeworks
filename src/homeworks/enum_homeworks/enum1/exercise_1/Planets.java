@@ -1,4 +1,4 @@
-package homeworks.enum_homeworks.exercise_1;
+package homeworks.enum_homeworks.enum1.exercise_1;
 
 /**
  * This work shows how many days it takes each planet to revolve around the sun.
