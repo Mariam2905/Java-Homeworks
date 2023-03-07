@@ -7,8 +7,6 @@ import homeworks.enum_homeworks.enum2.exercise_5.Seasons;
  * and then calculates the price of the pizza based on the size and number of toppings.
  */
 public class ChooseAPizza {
-    int chooseSize;
-    int chooseTopping;
     int sum;
 
     public void priceOfPizza(int chooseSize, int chooseTopping) {
