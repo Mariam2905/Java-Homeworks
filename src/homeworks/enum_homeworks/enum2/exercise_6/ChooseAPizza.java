@@ -12,10 +12,12 @@ public class ChooseAPizza {
     public void priceOfPizza(int chooseSize, int chooseTopping) {
         if (chooseSize == PizzaSize.SMALL.getPrice() && chooseTopping == Toppings.PEPPERONI.getPrice()) {
             sum = PizzaSize.SMALL.getPrice() * Toppings.PEPPERONI.getPrice();
+
             System.out.println(sum);
         } else if (chooseSize == PizzaSize.SMALL.getPrice() && chooseTopping == Toppings.MUSHROOMS.getPrice()) {
             sum = PizzaSize.SMALL.getPrice() * Toppings.MUSHROOMS.getPrice();
             System.out.println(sum);
         }
+
     }
 }

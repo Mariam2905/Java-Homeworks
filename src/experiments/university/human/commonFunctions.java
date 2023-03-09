@@ -1,6 +1,7 @@
 package experiments.university.human;
 
-public interface commonFunctions {
+public interface
+commonFunctions {
     void participate();
     void toBreak();
 }

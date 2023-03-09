@@ -33,5 +33,10 @@ public class Test {
         System.out.println(universityEPH.toString());
         universityEPH.setCourses(courses);
         System.out.println(universityEPH.toString());
+        System.out.println(teacher1.getSalary());
+        students.remove(1);
+        Course course3 = new Course("Mathematics", teacher1, students);
+        courses.add(course3);
+        System.out.println(universityEPH.toString());
     }
 }
