@@ -1,4 +1,4 @@
-package experiments.university.address;
+package experiments.university.model.address;
 
 public class Address {
     private String country;

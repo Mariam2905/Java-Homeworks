@@ -1,30 +1,35 @@
-package experiments.university.human;
+package experiments.university.model.human.common;
 
-import experiments.university.address.Address;
+import experiments.university.model.address.Address;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
-public abstract class Human {
-    private String name;
+public abstract class Human { private int id;
+    private String firstName;
     private String lastName;
-    private LocalDate date;
+    private final LocalDate date;
     private String mail;
     private String phoneNumber;
     private List<Address> addresses;
 
-    public Human() {
-    }
-
-    public Human(String name, String lastName, LocalDate date) {
-        this.name = name;
+    public Human(int id, String firstName, String lastName, final LocalDate date) {
+        this.id = id;
+        this.firstName = firstName;
         this.lastName = lastName;
         this.date = date;
     }
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
     }
 
     public String getLastName() {
@@ -35,8 +40,8 @@ public abstract class Human {
         return date;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
@@ -70,15 +75,14 @@ public abstract class Human {
     @Override
     public String toString() {
         return "Human{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", date=" + date +
                 ", mail='" + mail + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", addresses=" + addresses +
-                '}';
+                "}\n";
     }
-
-
 }
 

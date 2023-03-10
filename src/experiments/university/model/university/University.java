@@ -1,25 +1,27 @@
-package experiments.university.uni;
+package experiments.university.model.university;
 
-import experiments.university.address.Address;
+import experiments.university.model.address.Address;
+import experiments.university.model.group.Group;
 
 import java.util.List;
 
 public class University {
-    private List<Course> courses;
+
     private String name;
     private Address address;
+    private List<Group> groups;
 
     public University(String name, Address address) {
         this.name = name;
         this.address = address;
     }
 
-    public List<Course> getCourses() {
-        return courses;
+    public List<Group> getGroups() {
+        return groups;
     }
 
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
+    public void setGroups(List<Group> groups) {
+        this.groups = groups;
     }
 
     public String getName() {
@@ -41,9 +43,9 @@ public class University {
     @Override
     public String toString() {
         return "University{" +
-                "courses=" + courses +
+                "courses=" + groups +
                 ", name='" + name + '\'' +
                 ", address=" + address +
-                '}';
+                "}\n";
     }
 }
