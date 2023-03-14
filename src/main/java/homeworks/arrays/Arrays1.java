@@ -333,10 +333,10 @@ public class Arrays1 {
 //        myHomeworkArrays.repeatNumber(3);
 //        myHomeworkArrays.trio();
         int[] array = {17, 25, 0, 124, -36, -19, 48};
-//        myHomeworkArrays.descendingSequence(array);
+        myHomeworkArrays.descendingSequence(array);
 //        myHomeworkArrays.oddAtTheEnd(array);
 //        myHomeworkArrays.withoutZeros();
-        myHomeworkArrays.longestIncreasingSubsequence();
+//        myHomeworkArrays.longestIncreasingSubsequence();
 //        myHomeworkArrays.withBinaryForm();
 //        myHomeworkArrays.aboveTheDiagonal();
 //        myHomeworkArrays.respectToTheInvertedDiagonal();
