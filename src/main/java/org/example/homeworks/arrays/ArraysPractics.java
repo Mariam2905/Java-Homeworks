@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class ArraysPractics {
     /**
      * 1. Write a Java program to find the largest and smallest element of an array.
+     *
+     * @return
      */
-    void largestAndSmallestElement() {
+    int largestAndSmallestElement() {
         int numbers[] = {14, 58, -124, 0, 479, -25, 73};
         int largest = numbers[0];
         int smallest = numbers[0];
@@ -18,6 +20,7 @@ public class ArraysPractics {
         }
         System.out.println("Largest Number is : " + largest);
         System.out.println("Smallest Number is : " + smallest);
+        return largest;
     }
 
     /**

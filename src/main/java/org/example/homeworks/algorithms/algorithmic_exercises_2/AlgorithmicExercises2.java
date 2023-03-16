@@ -1,4 +1,4 @@
-package org.example.homeworks.algorithmic_exercises_2;
+package org.example.homeworks.algorithms.algorithmic_exercises_2;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -406,11 +406,11 @@ public class AlgorithmicExercises2 {
 //        myAlgorithmicExercises2.multiplication();
 //        myAlgorithmicExercises2.raisedToThePower();
 //        myAlgorithmicExercises2.digitsReversed();
-//        myAlgorithmicExercises2.primeNumber();
+        myAlgorithmicExercises2.primeNumber();
 //        myAlgorithmicExercises2.repeat();
 //        myAlgorithmicExercises2.positiveNegativeAndZero();
 //        myAlgorithmicExercises2.largestAndSmallest();
-        myAlgorithmicExercises2.armstrongNumbers();
+//        myAlgorithmicExercises2.armstrongNumbers();
 //        myAlgorithmicExercises2.sum(5);
 //        myAlgorithmicExercises2.log(5);
 //        myAlgorithmicExercises2.highOrLowRandom();
