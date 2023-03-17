@@ -6,21 +6,31 @@ public class ArraysPractics {
     /**
      * 1. Write a Java program to find the largest and smallest element of an array.
      *
-     * @return
+     * @param array ;
+     * @return largestNumber;
      */
-    int largestAndSmallestElement() {
-        int numbers[] = {14, 58, -124, 0, 479, -25, 73};
-        int largest = numbers[0];
-        int smallest = numbers[0];
-        for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] > largest)
-                largest = numbers[i];
-            else if (numbers[i] < smallest)
-                smallest = numbers[i];
+    int largestElement(int[]array) {
+        int largestNumber = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > largestNumber)
+                largestNumber = array[i];
         }
-        System.out.println("Largest Number is : " + largest);
-        System.out.println("Smallest Number is : " + smallest);
-        return largest;
+        return largestNumber;
+    }
+
+    /**
+     * 1.1. Write a Java program to find the largest and smallest element of an array.
+     *
+     * @param array;
+     * @return largestNumber;
+     */
+    int smallestElement(int[]array) {
+        int smallestNumber = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < smallestNumber)
+                smallestNumber = array[i];
+        }
+        return smallestNumber;
     }
 
     /**
@@ -113,12 +123,14 @@ public class ArraysPractics {
 
     public static void main(String[] args) {
         ArraysPractics myWork = new ArraysPractics();
-//        myWork.largestAndSmallestElement();
-//        myWork.sumOfElements();
+        int[] array = {14, 58, -124, 0, 479, -25, 73};
+//        System.out.println(myWork.largestElement(array));
+//        System.out.println(myWork.smallestElement(array));
+        myWork.sumOfElements();
         int[] A = {1, 2, 3, 4, 5, 8};
         int[] B = {10, 9, 8, 7, 6};
         int[] C = new int[A.length + B.length];
-        myWork.mergingArray(A, B, C);
+//        myWork.mergingArray(A, B, C);
 //        myWork.diagonalSum();
     }
 }

@@ -1,23 +1,26 @@
 package org.example.homeworks.arrays;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Arrays1 {
     /**
      * 1․ Գրել method, որը տպում է int[] n  array-ի դրական տարրերը․
      */
-    void positiveNumberOfArray() {
+    int positiveNumberOfArray() {
         int[] array = {25, 147, -87, 0, 471, -123, 0, -25, 75};
         for (int i = 0; i < array.length; i++) {
             if (array[i] > 0) {
                 System.out.print(array[i] + " ");
             }
         }
+        return 0;
     }
 
     /**
      * 2. Գրել method, որը տպում է short[] s  array-ի էլեմենտները հակառակ հերթականությամբ
      * Օրինակ՝ ( 257 -> 752)․
      */
-    void opposite() {
+    int opposite() {
         short[] array = {2, 5, 7};
         System.out.print("First array is: ");
         for (short i = 0; i < array.length; i++) {
@@ -29,18 +32,20 @@ public class Arrays1 {
             array[array.length - 1 - j] = element;
         }
         System.out.println();
-        System.out.print("The riversed array is: ");
+        System.out.print("The reversed array is: ");
         for (short k = 0; k < array.length; k++) {
             System.out.print(array[k]);
         }
+        return 0;
     }
 
     /**
      * 3. Գրել method, որը գտնում և  տպում է  long[] l array-ի ամենամեծ տարրը․
+     *
+     * @param array;
      * @return maxElement;
      */
-    long maxElement() {
-        long[] array = {4, 7, 1, 5, 2};
+    long maxElement(long[] array) {
         long maxElement = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] > maxElement) {
@@ -53,7 +58,8 @@ public class Arrays1 {
 
     /**
      * 4. Գրել method, որը գտնում և տպում է  float[] f  array-ի ամենափոքր տարրը․
-     *      @return minElement;
+     *
+     * @return minElement;
      */
     float minElement() {
         float[] array = {4.2f, -127.3f, 0.0f, 4.3f};
@@ -80,26 +86,45 @@ public class Arrays1 {
     }
 
     /**
+     * 5. Գրել method, որը int[] n array-ի էլեմենտները և տեղափոխում int[] m array-ի մեջ։
+     * 2-րդ տարբերակ
+     *
+     * @param arr1
+     * @return arr2;
+     */
+    int[] transfer1(int[] arr1) {
+        int[] arr2 = new int[arr1.length];
+        for (int i = 0; i < arr1.length; i++) {
+            arr2[i] = arr1[i];
+            System.out.print(arr2[i] + " ");
+        }
+        return arr2;
+    }
+
+    /**
      * 6․ Գրել method, որը ստեղծում է երկու նույն չափը ունեցող array-ներ,
      * գումարում է array -ի համապատասխան էլեմենտները և գրում երրորդ array-ի մեջ։
      * Oրինակ՝ array1 = {1,5,6,4,7}
      * array2 = {7,4,2,3,5}
      * array3 = {8,9,8,7,12}
+     *
+     * @param arr1, arr2;
+     * @return arr3;
      */
-    void sumOfElementsArray() {
-        int[] array1 = {1, 5, 6, 4, 7};
-        int[] array2 = {7, 4, 2, 3, 5};
-        int[] array3 = new int[5];
-        for (int i = 0; i < array1.length; i++) {
-            array3[i] = array1[i] + array2[i];
-            System.out.print(array3[i] + " ");
+    int[] sumOfElementsArray(int[] arr1, int[] arr2) {
+        int[] arr3 = new int[arr1.length];
+        for (int i = 0; i < arr1.length; i++) {
+            arr3[i] = arr1[i] + arr2[i];
+            System.out.print(arr3[i] + " ");
         }
+        return arr3;
     }
 
     /**
      * 7. Գրել method, որը հաշվում է թե քանի անգամ է k թիվը հանդիպել array-ի Էլեմենտների մեջ։
      * Oրինակ՝  array = {1,5,6,4,5}
      * k = 5; // 2
+     *
      * @param repeatNumber;
      * @return repeatNumber;
      */
@@ -111,8 +136,7 @@ public class Arrays1 {
                 count++;
             }
         }
-        System.out.print(count);
-        return repeatNumber;
+        return count;
     }
 
     /**
@@ -141,9 +165,10 @@ public class Arrays1 {
 
     /**
      * 9․ Դասավորել տրված թվերի հաջորդականության անդամները նվազման կարգով:
+     *
      * @param array;
      */
-    void descendingSequence(int[] array) {
+    int[] descendingSequence(int[] array) {
         System.out.print("Our array is: ");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
@@ -162,6 +187,7 @@ public class Arrays1 {
         for (int l = 0; l < array.length; l++) {
             System.out.print(array[l] + " ");
         }
+        return array;
     }
 
     /**
@@ -218,8 +244,10 @@ public class Arrays1 {
      * 12․ Տպել տրված թվերի հաջորդականության ամենաերկար աճող ենթահաջորդականությունը:
      * Oրինակ՝  array = {1,5,6,4,9,0,4,7,7,9,1}
      * // {0,4,7,7,9}
+     *
+     * @return subsequence;
      */
-    void longestIncreasingSubsequence() {
+    int[] longestIncreasingSubsequence() {
         int[] array = {1, 5, 6, 4, 9, 0, 4, 7, 7, 9, 1};
         int count = 0;
         int start = 0;
@@ -235,11 +263,12 @@ public class Arrays1 {
                 count = 0;
             }
         }
-        int[] subsequence = new int[counter + 1];
+        int[] subsequence = new int[counter];
         for (int i = 0; i < counter; i++) {
             subsequence[i] = array[i + start];
             System.out.print(subsequence[i] + " ");
         }
+        return subsequence;
     }
 
     /**
@@ -247,17 +276,17 @@ public class Arrays1 {
      * և արտածել n  թվի 10-ական ներկայացումը:
      * Oրինակ՝    array = {1,1,0,0,1,1}
      * // 51
+     *
+     * @param arr3;
      * @return number;
      */
-    int withBinaryForm() {
-        int[] array = {1, 1, 0, 0, 1, 1};
+    int withBinaryForm(int[]arr3) {
         int number = 0;
         int degree = 0;
-        for (int i = array.length - 1; i >= 0; i--) {
-            number += array[i] * Math.pow(2, degree);
+        for (int i = arr3.length - 1; i >= 0; i--) {
+            number += arr3[i] * Math.pow(2, degree);
             degree++;
         }
-        System.out.println(number);
         return number;
     }
 
@@ -325,19 +354,25 @@ public class Arrays1 {
     public static void main(String[] args) {
         Arrays1 myHomeworkArrays = new Arrays1();
 //        myHomeworkArrays.positiveNumberOfArray();
-        myHomeworkArrays.opposite();
-//        myHomeworkArrays.maxElement();
+//        myHomeworkArrays.opposite();
+//        System.out.println(myHomeworkArrays.opposite());
+        long[] array1 = {17, 25, 0, 124, -36, -19, 48};
+//        myHomeworkArrays.maxElement(array1);
 //        myHomeworkArrays.minElement();
 //        myHomeworkArrays.transfer();
-//        myHomeworkArrays.sumOfElementsArray();
-//        myHomeworkArrays.repeatNumber(3);
+        int[] arr1 = {12, 25, 36, 47, 29};
+        int[] arr2 = {5, 2, 7, 4, 19};
+//      myHomeworkArrays.transfer1(arr1);
+//        myHomeworkArrays.sumOfElementsArray(arr1, arr2);
+//        System.out.println(myHomeworkArrays.repeatNumber(5));
 //        myHomeworkArrays.trio();
         int[] array = {17, 25, 0, 124, -36, -19, 48};
-        myHomeworkArrays.descendingSequence(array);
+//        myHomeworkArrays.descendingSequence(array);
 //        myHomeworkArrays.oddAtTheEnd(array);
 //        myHomeworkArrays.withoutZeros();
 //        myHomeworkArrays.longestIncreasingSubsequence();
-//        myHomeworkArrays.withBinaryForm();
+        int[] arr3 = {1, 1, 0, 0, 1, 1};
+//        System.out.println(myHomeworkArrays.withBinaryForm(arr3));
 //        myHomeworkArrays.aboveTheDiagonal();
 //        myHomeworkArrays.respectToTheInvertedDiagonal();
 //        myHomeworkArrays.sumIsZero();
