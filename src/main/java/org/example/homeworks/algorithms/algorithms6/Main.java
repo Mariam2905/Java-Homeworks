@@ -14,7 +14,11 @@ public class Main {
 //        sorts.printArray(sortedArray2);
 //        int[] sortedArray3 = sorts.insertionSort(array);
 //        sorts.printArray(sortedArray3);
-        int[] sortedArray4 = sorts.mergeSort(array);
-        sorts.printArray(sortedArray4);
+//        int[] sortedArray4 = sorts.mergeSort(array);
+//        sorts.printArray(sortedArray4);
+//        int[] sortedArray5 = sorts.quickSort(array, 0, array.length - 1);
+//        sorts.printArray(sortedArray5);
+        int[] sortedArray6 = sorts.heapSort(array);
+        sorts.printArray(sortedArray6);
     }
 }

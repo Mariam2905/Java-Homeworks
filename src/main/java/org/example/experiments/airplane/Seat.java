@@ -1,10 +1,8 @@
 package org.example.experiments.airplane;
 
-import java.util.List;
-
 public class Seat {
-    private String seatNumber;
-    private List<String> seats;
+    private final String seatNumber;
+    private boolean reserved = false;
 
     public Seat(String seatNumber) {
         this.seatNumber = seatNumber;
@@ -14,18 +12,33 @@ public class Seat {
         return seatNumber;
     }
 
-    public void setSeatNumber(String seatNumber) {
-        this.seatNumber = seatNumber;
+    /**
+     * This method does not allow reserving an already reserved seat.
+     *
+     * @return if it is possible;
+     */
+    public boolean reserve() {
+        if (!this.reserved) {
+            this.reserved = true;
+            System.out.println("Seat " + seatNumber + " is now reserved.");
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
-     * This method print all the seat numbers.
+     * This method cancel a reserved seat.
      *
-     * @param seatNumber;
+     * @return if it is possible;
      */
-    public void printSeatNumbers(String seatNumber) {
-        for (int i = 0; i < this.seatNumber.length(); i++) {
-            System.out.println();
+    public boolean cancel() {
+        if (this.reserved) {
+            this.reserved = false;
+            System.out.println("Reservation of seat " + seatNumber + " has now been cancelled");
+            return true;
+        } else {
+            return false;
         }
     }
 }

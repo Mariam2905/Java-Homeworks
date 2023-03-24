@@ -98,8 +98,114 @@ public class SortAlgorithms {
      * @return array;
      */
     int[] mergeSort(int[] array) {
-
+        int n = array.length;
+        if (n > 1) {
+            int mid = array.length / 2;
+            int[] left = Arrays.copyOfRange(array, 0, mid);
+            int[] right = Arrays.copyOfRange(array, mid, n);
+            mergeSort(left);
+            mergeSort(right);
+            merge(array, left, right);
+        }
         return array;
+    }
+
+    void merge(int[] array, int[] left, int[] right) {
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < left.length && j < right.length) {
+            if (left[i] <= right[j]) {
+                array[k++] = left[i++];
+            } else {
+                array[k++] = right[j++];
+            }
+        }
+        while (i < left.length) {
+            array[k++] = left[i++];
+        }
+        while (j < right.length) {
+            array[k++] = right[j++];
+        }
+    }
+
+    /**
+     * This method sorts an array with Quick sort.
+     *
+     * @param array;
+     * @param start;
+     * @param end;
+     * @return array;
+     */
+    int[] quickSort(int[] array, int start, int end) {
+        try {
+            if (start > array.length) {
+                throw new IndexOutOfBoundsException("You can't enter a start number greater than the array length.");
+            }
+            if (start < end) {
+                int pivotIndex = partition(array, start, end);
+                quickSort(array, start, pivotIndex - 1);
+                quickSort(array, pivotIndex + 1, end);
+            }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        return array;
+    }
+
+    int partition(int[] array, int start, int end) {
+        int pivot = array[end];
+        int i = start - 1;
+        for (int j = start; j < end; j++) {
+            if (array[j] <= pivot) {
+                i++;
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        int temp = array[i + 1];
+        array[i + 1] = array[end];
+        array[end] = temp;
+        return i + 1;
+    }
+
+    /**
+     * This method sorts an array with Heap sort.
+     *
+     * @param array;
+     * @return array;
+     */
+    int[] heapSort(int[] array) {
+        int n = array.length;
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            heapify(array, n, i);
+        }
+        for (int i = n - 1; i >= 0; i--) {
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+            heapify(array, i, 0);
+        }
+        return array;
+    }
+
+    void heapify(int[] arr, int n, int i) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+        if (left < n && arr[left] > arr[largest]) {
+            largest = left;
+        }
+        if (right < n && arr[right] > arr[largest]) {
+            largest = right;
+        }
+        if (largest != i) {
+            int temp = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = temp;
+            heapify(arr, n, largest);
+        }
     }
 
 

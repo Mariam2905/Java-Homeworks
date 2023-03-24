@@ -1,15 +1,14 @@
 package org.example.experiments.bank;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Bank {
     private String bankName;
-    private List<BankAccount> accounts;
+    private ArrayList<BankAccount> accounts;
 
     public Bank(String bankName) {
         this.bankName = bankName;
-        this.accounts = new ArrayList<BankAccount>();
+        accounts = new ArrayList<BankAccount>();
     }
 
     /**
@@ -17,11 +16,11 @@ public class Bank {
      *
      * @param accountNumber;
      * @param accountHolderName;
-     * @param accountbalance;
+     * @param accountBalance;
      */
-    public void openAccount(String accountNumber, String accountHolderName, double accountbalance) {
-        BankAccount account = new BankAccount(accountNumber, accountHolderName, accountbalance);
-        this.accounts.add(account);
+    public void openAccount(String accountNumber, String accountHolderName, double accountBalance) {
+        BankAccount newAccount = new BankAccount(accountNumber, accountHolderName, accountBalance);
+        accounts.add(newAccount);
     }
 
 
@@ -31,10 +30,11 @@ public class Bank {
      * @param accountNumber;
      */
     public void closeAccount(String accountNumber) {
-        for (int i = 0; i < this.accounts.size(); i++) {
-            BankAccount account = this.accounts.get(i);
+        for (int i = 0; i < accounts.size(); i++) {
+//            for (BankAccount account : accounts) {
+            BankAccount account = accounts.get(i);
             if (account.getAccountNumber().equals(accountNumber)) {
-                this.accounts.remove(i);
+                accounts.remove(i);
                 break;
             }
         }
@@ -47,10 +47,11 @@ public class Bank {
      * @param amount
      */
     public void deposit(String accountNumber, double amount) {
-        for (int i = 0; i < this.accounts.size(); i++) {
-            BankAccount account = this.accounts.get(i);
+//        for (int i = 0; i < accounts.size(); i++) {
+//            BankAccount account = accounts.get(i);
+        for (BankAccount account : accounts) {
             if (account.getAccountNumber().equals(accountNumber)) {
-                account.depositingMoney(15000);
+                account.depositingMoney(amount);
                 break;
             }
         }
@@ -63,10 +64,11 @@ public class Bank {
      * @param amount
      */
     public void withdraw(String accountNumber, double amount) {
-        for (int i = 0; i < this.accounts.size(); i++) {
-            BankAccount account = this.accounts.get(i);
+//            for (int i = 0; i < accounts.size(); i++) {
+//                BankAccount account = accounts.get(i);
+        for (BankAccount account : accounts) {
             if (account.getAccountNumber().equals(accountNumber)) {
-                account.withdrawingMoney(7000);
+                account.withdrawingMoney(amount);
                 break;
             }
         }
@@ -77,10 +79,12 @@ public class Bank {
      */
     public double balance(String accountNumber) {
         double sum = 0.0;
-        for (int i = 0; i < this.accounts.size(); i++) {
-            BankAccount account = this.accounts.get(i);
+        for (int i = 0; i < accounts.size(); i++) {
+            BankAccount account = accounts.get(i);
             sum += account.checkingTheCurrentAccount();
         }
         return sum;
     }
 }
+
+

@@ -1,7 +1,5 @@
 package org.example.experiments.bank;
 
-import java.util.Scanner;
-
 public class BankAccount {
     private String accountNumber;
     private String accountHolderName;
@@ -17,48 +15,50 @@ public class BankAccount {
         return accountNumber;
     }
 
-    public String getAccountHolderName() {
-        return accountHolderName;
-    }
-
-    public double getAccountBalance() {
-        return accountBalance;
-    }
-
     /**
      * Money depositing method.
+     *
+     * @param amount;
      */
-    public void depositingMoney(int deposit) {
+    public void depositingMoney(double amount) {
         try {
-            if (deposit < 0) {
+            if (amount < 0) {
                 throw new IllegalArgumentException("You cannot add a negative amount.");
             }
-            System.out.println("You are added " + deposit + " money.");
+            System.out.println("You are added " + amount + " money.");
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
-        accountBalance += deposit;
+        accountBalance += amount;
         System.out.println("Your account balance after depositing is: " + accountBalance);
     }
 
     /**
      * Money withdrawal method.
-     * Withdraw only if total money greater than or equal to the money requested for withdrawal
+     * Withdraw only if total money greater than or equal to the money requested for withdrawal.
+     *
+     * @param amount;
      */
-    public void withdrawingMoney(int withdrawn) {
+    public void withdrawingMoney(double amount) {
         try {
-            if (withdrawn > accountBalance) {
+            if (amount > accountBalance) {
                 throw new IllegalArgumentException("Your account balance is insufficient․");
             } else {
-                accountBalance -= withdrawn;
-                System.out.println("Your balance after withdraw is: " + accountBalance);}
+                accountBalance -= amount;
+                System.out.println("Your balance after withdraw is: " + accountBalance);
+            }
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
 
+    /**
+     * This method show the current balance
+     *
+     * @return accountBalance;
+     */
     public double checkingTheCurrentAccount() {
-        System.out.println(accountBalance);
+        System.out.println("Your current balance is: " + accountBalance);
         return accountBalance;
     }
 }
