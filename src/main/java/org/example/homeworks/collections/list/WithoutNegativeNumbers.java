@@ -1,4 +1,4 @@
-package org.example.homeworks.collections;
+package org.example.homeworks.collections.list;
 
 import java.util.LinkedList;
 import java.util.List;
